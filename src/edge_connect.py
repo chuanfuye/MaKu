@@ -24,7 +24,7 @@ class EdgeConnect():
         self.debug = False
         self.model_name = model_name
         self.edge_model = EdgeModel(config).to(config.DEVICE)
-        self.inpaint_model = InpaintingModel(config).to(config.DEVICE)
+        self.inpaint_model = InpaintingModel(config).to(config.DEVICE) # model download??
 
         self.psnr = PSNR(255.0).to(config.DEVICE)
         self.edgeacc = EdgeAccuracy(config.EDGE_THRESHOLD).to(config.DEVICE)
